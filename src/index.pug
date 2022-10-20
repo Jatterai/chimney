@@ -1,0 +1,17 @@
+extends html/main
+
+block title 
+	title #{mainPage}
+
+block main-title 
+	|#{mainPage}
+
+block path 
+	+prev('Главная')
+	+curr(mainPage)
+	
+block content 
+	+section('process', 'Процесс выполнения монтажа')
+		p fist paragraph 
+		div(style='background: red; height: 100px')
+

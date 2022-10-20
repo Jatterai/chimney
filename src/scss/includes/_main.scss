@@ -1,0 +1,36 @@
+@import "./null";
+@import "./fonts";
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Montserrat";
+}
+.wrapper {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 1 auto;
+	position: relative;
+}
+
+._container {
+	max-width: 1258px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 0 auto;
+	@media (max-width: 767px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+@import "./_header";

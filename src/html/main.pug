@@ -1,0 +1,30 @@
+include includes/config
+include includes/mixins
+
+doctype html
+html(lang="en")
+	block head
+		head
+			meta(charset="UTF-8")
+			meta(http-equiv="X-UA-Compatible", content="IE=edge")
+			meta(name="viewport", content="width=device-width, initial-scale=1.0")
+			block title
+				title Title
+			block links
+				link(rel='stylesheet' href='css/style.min.css')
+				link(rel='stylesheet' href='files/icons.css')
+	body 
+		.wrapper 
+			header.header#header 
+				.header__container
+					include includes/header
+			main.main#main
+				.main__title.main-title
+					.main-title__container._container 
+						h1.main-title__title.title
+							block main-title
+						.main-title__path
+							block path
+				block content
+					| i am content
+			footer.footer#footer
