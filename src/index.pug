@@ -1,5 +1,8 @@
 extends html/main
 
+mixin myLi(name)
+	li.reasons__list-item= name 
+
 block title 
 	title #{mainPage}
 
@@ -9,9 +12,82 @@ block main-title
 block path 
 	+prev('Главная')
 	+curr(mainPage)
-	
-block content 
-	+section('process', 'Процесс выполнения монтажа')
-		p fist paragraph 
-		div(style='background: red; height: 100px')
 
+block description
+block content
+	+description
+		|В <span>Дымоход.ру</span>  вам помогут как приобрести, так и установить дымоход любой конфигурации. В нашем монтажном отделе, состоящим из трёх бригад работают квалифицированные специалисты, которые ежегодно проходят курсы повышения квалификации. Все работы проводим качественно и аккуратно, в короткий срок и на совесть.
+	section.reasons 
+		.reasons__container._container
+			.reasons__content
+				p.reasons__uptitle Lorem ipsum dolor sit amet
+				h2.reasons__title Lorem ipsum
+				ul.reasons__list 
+					li.reasons__list-item Доступные цены
+					li.reasons__list-item Собственное производсвто  Дымоходов
+					li.reasons__list-item Выполнение необходимых работ, связанных с установкой камина, печи, котла
+					li.reasons__list-item Гарантия (от трёх до десяти лет)
+					li.reasons__list-item Работаем чисто, аккуратно, убираем за собой, не сквернословим
+					li.reasons__list-item Только русские квалифицированные специалисты
+					li.reasons__list-item Устанавливаем любые дымоходы всех производителей
+			.reasons__image
+				img(src="@img/pipe.png", alt="pipe")
+	+section('process', 'Процесс выполнения монтажа')
+		ol.process__list
+			li.process__item Рассчёт предварительной заявки
+			li.process__item Замер объекта нашим инженером
+			li.process__item Составление Коммерческого предложения по изделиям дымохода и окончательной сметы на  работы
+			li.process__item Изготовление Дымохода, покраска (если требуется)
+			li.process__item Монтаж продукции, проверка и наладкапробный запуск системы и последующая эксплуатация
+			li.process__item Гарантийное обслуживание по соответствующем сроку
+	+section('why', 'Почему Дымоход.ру?')
+		p.why__text В отличие от других производителей, мы ручаемся за качество продукции, т.к. все Дымоходы изготавливаются из качественной стали, проверенного теплоизолятора, по современной технологии плазменной сварки «встык»
+		.why__row 
+			.why__item
+				.why__img
+					img(src="./img/icons/guarantee.svg", alt="")
+				p.why__reason Большой гарантийный срок
+				p.why__item-txt Крепёж, стыковка элементов – <span>10 лет</span><br>
+					|Сквозная коррозия труб – <span>5 лет</span><br>
+					|Гидроизоляция – <span>3 года</span><br>
+			.why__item
+				.why__img
+					img(src="./img/icons/architect.svg", alt="")
+				p.why__reason Помощь в покупке агрегата
+				p.why__item-txt (печи, камина, котла), а также качественной установке на объекте с последующим гарантийным сервисом
+			.why__item
+				.why__img
+					img(src="./img/icons/review.svg", alt="")
+				p.why__reason Реальные отзывы клиентов
+				p.why__item-txt Убедитесь в добросовестности исполнения, прочитав Отзывы клиентов в специальном разделе.
+	section.help
+		.help__container._container 
+			h3.help__title необходима консультация?
+			p.help__subtitle оставьте заявку или свяжитесь с нами в социальных сетях
+			.help__social-media 
+				a(href="https://vk.com" target='_blank'):  i._icon-vk 
+				a(href="https://t.me/jatterai" target='_blank'): i._icon-tg 
+				a(href="https://instagram.com" target='_blank'): i._icon-inst
+				a(href="https://web.whatsapp.com" target='_blank'): i._icon-whatsapp
+			form.help__form.form(action="#") 
+				p.form__title Для <span>консультации</span> заполните форму!
+				p.form__subtitle С Вами свяжутся в ближайшее время
+				.form__box 
+					input.form__input(type="text" placeholder='Ваше имя')
+					input.form__input(type="tel" placeholder='Ваш телефон')
+					input.form__input.form__input-sub(type="submit")
+	+section('video', 'Видео об установке')
+		p.video__descriptiom Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		.video__box 
+			<iframe width="560"  src="https://www.youtube.com/embed/t6isux5XWH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	+section('photos', 'Фото выполненных работ')
+		p.photos__description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		.photos__grid
+			.photos__img: img(src="./img/photos/1.jpg", alt="house")
+			.photos__img: img(src="./img/photos/2.jpg", alt="home")
+			.photos__img: img(src="./img/photos/3.jpg", alt="fireplace")
+			.photos__img: img(src="./img/photos/4.jpg", alt="bricks")
+			.photos__img: img(src="./img/photos/5.jpg", alt="garbage")
+			.photos__img: img(src="./img/photos/6.jpg", alt="another home")
+			.photos__img: img(src="./img/photos/7.jpg", alt="picture of a cat")
+			.photos__img: img(src="./img/photos/8.jpg", alt="horse")

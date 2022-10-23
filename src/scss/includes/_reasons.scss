@@ -1,0 +1,130 @@
+.reasons {
+	background: url("../img/bg1.png") top 46px left 83.5% no-repeat;
+	@media (max-width: 1740px) {
+		background-position: center right 40px;
+	}
+	@media (max-width: 1500px) {
+		background-position: top 50% right 3%;
+	}
+	@media (max-width: 1440px) {
+		background-size: 50vw auto;
+		background-position: center right;
+	}
+	@media (max-width: 1040px) {
+		background: none;
+	}
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(2, 50%);
+		padding-top: 47px;
+		padding-bottom: 115px;
+		@media (max-width: 1040px) {
+			padding-top: 23px;
+			grid-template-columns: 1fr;
+			padding-bottom: 57px;
+		}
+		@media (max-width: 400px) {
+			padding-top: 20px;
+			padding-bottom: 43px;
+		}
+	}
+
+	&__content {
+	}
+
+	&__uptitle {
+		white-space: nowrap;
+		font-weight: 600;
+		font-size: calc(30px + 10 * (100vw / 1920));
+		line-height: 155%;
+		@media (max-width: 1000px) {
+			font-size: calc(20px + 10 * (100vw / 768));
+		}
+		@media (max-width: 400px) {
+			font-size: calc(15px + 3 * (100vw / 320));
+		}
+	}
+
+	&__title {
+		font-weight: 800;
+		font-size: calc(40px + 10 * (100vw / 1920));
+		line-height: 126%;
+		text-transform: uppercase;
+		color: $color5;
+		margin-bottom: calc(45 / 60) + em;
+		@media (max-width: 1000px) {
+			font-size: calc(30px + 10 * (100vw / 768));
+			line-height: 130%;
+			margin: 0px 0px px 0px;
+			margin-bottom: calc(30 / 60) + em;
+		}
+		@media (max-width: 400px) {
+			font-size: calc(25px + 5 * (100vw / 320));
+			margin-bottom: 17px;
+		}
+	}
+
+	&__list {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		color: #000000;
+		padding-left: 28px;
+		@media (max-width: 1000px) {
+			padding-left: 30px;
+		}
+		@media (max-width: 400px) {
+			padding-left: 15px;
+			font-size: 14px;
+		}
+	}
+
+	&__list-item {
+		display: flex;
+		max-width: 95%;
+		&:not(:last-child) {
+			margin-bottom: 1.5em;
+			@media (max-width: 400px) {
+				line-height: 171%;
+				margin-bottom: 1.7em;
+			}
+		}
+		&:before {
+			content: "";
+			position: relative;
+			display: block;
+			align-self: flex-start;
+			top: 0.5em;
+			margin-right: 17px;
+			min-width: 9px;
+			min-height: 9px;
+			border-radius: 50%;
+			background-color: #ea6628;
+		}
+		@media (max-width: 1000px) {
+			min-width: 100%;
+		}
+	}
+
+	&__image {
+		justify-self: end;
+		align-self: start;
+		position: relative;
+		top: -28px;
+		left: 50px;
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: 1440px) {
+			top: 0;
+			left: 0;
+			justify-self: center;
+		}
+		@media (max-width: 1040px) {
+			display: none;
+		}
+		@media (max-width: 890px) {
+			display: none;
+		}
+	}
+}

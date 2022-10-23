@@ -1,6 +1,8 @@
 @import "./null";
 @import "./fonts";
 
+$color5: #e33e54;
+
 html {
 	scroll-behavior: smooth;
 }
@@ -22,15 +24,86 @@ main {
 	position: relative;
 }
 
+.main {
+	&__title {
+	}
+
+	&__description {
+	}
+	&:has(:last-child) {
+		padding-bottom: 136px;
+		@media (max-width: 1040px) {
+			padding-bottom: 70px;
+		}
+		@media (max-width: 800px) {
+			padding-bottom: 56px;
+		}
+	}
+}
+
+.description {
+	&__container {
+		padding-top: calc(81 / 1920 * 100) + vw;
+		@media (max-width: 769px) {
+			padding-top: calc(40px + 20 * (100vw / 769));
+		}
+		@media (max-width: 500px) {
+			padding-top: 16px;
+		}
+	}
+
+	&__text {
+		line-height: 187%;
+		padding-left: 2px;
+		font-size: 16px;
+		span {
+			color: $color5;
+		}
+		@media (max-width: 500px) {
+			font-size: 14px;
+			line-height: calc(26 / 14);
+		}
+	}
+}
+
 ._container {
 	max-width: 1258px;
 	padding-left: 20px;
 	padding-right: 20px;
 	margin: 0 auto;
-	@media (max-width: 767px) {
+	@media (max-width: 769px) {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
 }
 
+.subtitle {
+	font-weight: 600;
+	font-size: 40px;
+	line-height: calc(49 / 40);
+	padding-top: 16px;
+	position: relative;
+	&:before {
+		width: 74px;
+		height: 5px;
+		content: "";
+		display: block;
+		background-color: $color5;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	@media (max-width: 960px) {
+		font-size: 30px;
+		line-height: calc(37 / 30);
+		padding-top: 16px;
+	}
+	@media (max-width: 767px) {
+		font-size: 20px;
+		line-height: 150%;
+	}
+}
+
 @import "./_header";
+@import "./_maintitle";
+@import "./_reasons";

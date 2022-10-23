@@ -1,7 +1,6 @@
 //- mixins for main title paths
 mixin prev(name)
 	span.main-title__prev= name
-	<i>></i>
 
 mixin curr(name)
 	span.main-title__curr= name
@@ -9,7 +8,7 @@ mixin curr(name)
 mixin section(name, title)
 	section(class=name)
 		div(class=name+"__container _container")
-			h2(class=name+"__title subtitle")= title
+			h3(class=name+"__title subtitle")= title
 			if block 
 				div(class=name+"__content")
 					block

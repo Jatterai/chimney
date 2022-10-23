@@ -1,5 +1,6 @@
 include includes/config
 include includes/mixins
+include includes/maindescription
 
 doctype html
 html(lang="en")
@@ -25,6 +26,7 @@ html(lang="en")
 							block main-title
 						.main-title__path
 							block path
+				block description
 				block content
 					| i am content
 			footer.footer#footer
