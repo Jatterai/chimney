@@ -104,6 +104,26 @@ main {
 	}
 }
 
+@mixin socmedia($color) {
+	color: $color;
+	font-size: 23px;
+	a {
+		cursor: pointer;
+		transition: all 200ms ease-out 0s;
+		&:hover {
+			color: #fefefe;
+			text-shadow: 0 0 10px $color;
+		}
+	}
+	& a:not(:last-child) {
+		margin-right: 30px;
+	}
+	& a:nth-child(3) {
+		margin-right: 44px;
+	}
+}
+
 @import "./_header";
 @import "./_maintitle";
 @import "./_reasons";
+@import "./footer";

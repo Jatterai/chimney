@@ -79,7 +79,7 @@ block content
 	+section('video', 'Видео об установке')
 		p.video__descriptiom Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		.video__box 
-			<iframe width="560"  src="https://www.youtube.com/embed/t6isux5XWH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	+section('photos', 'Фото выполненных работ')
 		p.photos__description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		.photos__grid
@@ -91,3 +91,35 @@ block content
 			.photos__img: img(src="./img/photos/6.jpg", alt="another home")
 			.photos__img: img(src="./img/photos/7.jpg", alt="picture of a cat")
 			.photos__img: img(src="./img/photos/8.jpg", alt="horse")
+
+block footer 
+	.footer__block
+		h5.footer__subtitle КАТАЛОГ
+		ul.footer__list
+			li.footer__list-item: a.footer__link Дымоходы
+			li.footer__list-item: a.footer__link Дымососы
+			li.footer__list-item: a.footer__link Печи для дома
+			li.footer__list-item: a.footer__link Печи для бани
+			li.footer__list-item: a.footer__link Камины
+			li.footer__list-item: a.footer__link Силикат кальция
+			li.footer__list-item: a.footer__link Котлы
+			li.footer__list-item: a.footer__link Ещё
+	.footer__block
+		h5.footer__subtitle ИНФОРМАЦИЯ
+		ul.footer__list
+			li.footer__list-item: a.footer__link Каталог
+			li.footer__list-item: a.footer__link Установка и монтаж
+			li.footer__list-item: a.footer__link Отзывы 
+			li.footer__list-item: a.footer__link Ликвидация товара
+			li.footer__list-item: a.footer__link Полезное
+			li.footer__list-item: a.footer__link Контакты
+			li.footer__list-item: a.footer__link Оплата и доставка
+	.footer__block
+		h5.footer__subtitle ВРЕМЯ РАБОТЫ
+		p.footer__worktime <i class='_icon-clock'></i> <span>пн-пт</span> 9:00 – 20:00   <span>сб-вс</span> 10:00 – 18:00
+		p.footer__adress <i class='_icon-placeholder'></i>г. Санкт - Петербург ,ул. Тамбасова д.7
+		.footer__social-media
+			a(href="https://vk.com" target='_blank'):  i._icon-vk 
+			a(href="https://t.me/jatterai" target='_blank'): i._icon-tg 
+			a(href="https://instagram.com" target='_blank'): i._icon-inst
+			a(href="https://web.whatsapp.com" target='_blank'): i._icon-whatsapp
