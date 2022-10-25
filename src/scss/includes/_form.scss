@@ -47,24 +47,10 @@ $orange: #ea6628;
 	}
 
 	&__social-media {
-		color: $orange;
 		text-align: center;
-		font-size: 23px;
 		margin-bottom: 31px;
-		a {
-			cursor: pointer;
-			transition: all 200ms ease-out 0s;
-			&:hover {
-				color: #fefefe;
-				text-shadow: 0 0 10px $orange;
-			}
-		}
-		& a:not(:last-child) {
-			margin-right: 30px;
-		}
-		& a:nth-child(3) {
-			margin-right: 44px;
-		}
+
+		@include socmedia(#ea6628);
 		@media (max-width: 800px) {
 			margin-bottom: 30px;
 		}
