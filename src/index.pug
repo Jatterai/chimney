@@ -1,5 +1,9 @@
 extends html/main
 
+block script
+	.alert
+	script(src="js/app.min.js") 
+
 mixin myLi(name)
 	li.reasons__list-item= name 
 
@@ -74,8 +78,8 @@ block content
 				p.form__title Для <span>консультации</span> заполните форму!
 				p.form__subtitle С Вами свяжутся в ближайшее время
 				.form__box 
-					input.form__input(type="text" placeholder='Ваше имя')
-					input.form__input(type="tel" placeholder='Ваш телефон')
+					input.form__input(type="text" name='name' placeholder='Ваше имя')
+					input.form__input(type="tel" name='phone' placeholder='Ваш телефон')
 					input.form__input.form__input-sub(type="submit")
 	+section('video', 'Видео об установке')
 		p.video__descriptiom Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
